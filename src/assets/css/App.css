@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  text-align: center;
+}
+
+body .active {
+  border-bottom: 2px solid #61dafb;
+}
+
+body #menu-colap {
+  display: none;
+}
+
+body #colp.view {
+  display: block;
+  width: 90%;
+}
+
+body .colp {
+  display: none;
+  z-index: 100;
+  background: rgba(19, 90, 196, 0.774);
+  height: 100vh;
+  width: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 400ms all;
+}
+
+body .colp #close {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  line-height: 40px;
+  bottom: 20px;
+  right: 0;
+  background: #61dafb;
+  font-size: 2rem;
+  color: white;
+}
+
+body .colp ul li {
+  display: block;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+body .colp ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+}
+
+body header {
+  height: 120px;
+  width: 100%;
+  border-top: 3px solid #61dafb;
+  border-bottom: 1px solid #ccc;
+}
+
+body header .center {
+  width: 75%;
+  margin: 0px auto;
+}
+
+body header .center .logo {
+  width: 30%;
+  font-size: 30px;
+  float: left;
+  margin-top: 30px;
+}
+
+body header .center .logo .app-logo {
+  height: 60px;
+  display: block;
+  float: left;
+  animation: giro infinite 8s linear;
+}
+
+body header .center .logo #brand {
+  padding-top: 8px;
+  padding-left: 5px;
+  display: block;
+  float: left;
+}
+
+body header .center #menu {
+  width: 70%;
+  float: right;
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+
+body header .center #menu ul {
+  text-align: right;
+  list-style: none;
+}
+
+body header .center #menu ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+body header .center #menu ul li a {
+  text-decoration: none;
+  color: #61dafb;
+  transition: 300ms all;
+}
+
+body header .center #menu ul li a:hover {
+  color: #34879e;
+}
+
+body .clearfix {
+  clear: both;
+  float: none;
+}
+
+body .slider-small {
+  color: white;
+  height: 150px;
+  line-height: 150px;
+  background: #61dafb;
+  background: radial-gradient(ellipse at center, #61dafb 0%, #61dafb 15%, #50aeef 75%, #499bea 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61dafb', endColorstr='#499bea', GradientType=1 );
+}
+
+body .slider {
+  width: 100%;
+  height: 300px;
+  color: white;
+  line-height: 280px;
+  background: #61dafb;
+  background: radial-gradient(ellipse at center, #61dafb 0%, #61dafb 15%, #50aeef 75%, #499bea 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61dafb', endColorstr='#499bea', GradientType=1 );
+}
+
+body #content {
+  width: 70%;
+  float: left;
+  min-height: 650px;
+  margin-right: 20px;
+  margin-top: 40px;
+  border-right: 2px solid turquoise;
+  border-bottom: 2px solid turquoise;
+  margin-bottom: 50px;
+}
+
+body #content .form {
+  padding-top: 50px;
+  width: 40%;
+  margin: auto;
+}
+
+body #content .form textarea {
+  width: 100%;
+  min-height: 200px;
+}
+
+body #content .form .inputs-form {
+  width: 100%;
+}
+
+body #content .form #btn-submit {
+  margin: 20px auto;
+  display: block;
+  width: 30%;
+  padding: 10px;
+  background: teal;
+  color: white;
+}
+
+body #content .form #btn-submit:hover {
+  background: black;
+}
+
+body #content .article-item {
+  width: 80%;
+  padding: 20px;
+  text-align: left;
+}
+
+body #content .article-item .date {
+  display: inline-block;
+  margin-top: 20px;
+  color: #444;
+}
+
+body #content .article-item #p-big {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+body #content .article-item .image-wrap-big {
+  width: 80%;
+}
+
+body #content .article-item .image-wrap-big img {
+  margin: auto;
+  display: block;
+  width: 80%;
+}
+
+body #content .article-item .image-wrap {
+  width: 100px;
+  float: left;
+  margin-right: 20px;
+}
+
+body #content .article-item .image-wrap img {
+  display: block;
+  width: 100%;
+}
+
+body #sidebar {
+  width: 25%;
+  min-height: 500px;
+  margin-top: 80px;
+  float: left;
+}
+
+body #sidebar input[type="text"] {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+body #sidebar input[type="text"]:hover, body #sidebar input[type="text"]:focus {
+  box-shadow: 0 0 5px #444 inset;
+}
+
+body #sidebar #nav-blog a {
+  margin: 10px auto;
+  display: inline-block;
+  padding: 10px;
+  background: teal;
+  text-decoration: none;
+  color: white;
+  transition: 400ms all;
+}
+
+body #sidebar #nav-blog a:hover {
+  background: black;
+}
+
+body #sidebar .sidebar-item {
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+body #sidebar .sidebar-item h3 {
+  text-transform: uppercase;
+  font-size: 17px;
+  margin: 0px;
+  border-bottom: 3px solid #eee;
+}
+
+body #footer {
+  background: #f7f7f7;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #444;
+}
+
+@keyframes giro {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 880px) {
+  body header .center #menu {
+    width: 50%;
+    margin: auto;
+  }
+  body header .center .logo {
+    width: auto;
+    float: none;
+  }
+}
+
+@media (max-width: 710px) {
+  body .slider {
+    max-height: 120px;
+  }
+  body .slider h1 {
+    line-height: 120px;
+  }
+  body header .center #menu {
+    display: none;
+  }
+  body header .center #menu-colap {
+    margin-top: 10px;
+    float: right;
+    width: 55px;
+    height: 55px;
+    display: block;
+    line-height: 48px;
+    border: 2px solid #444;
+  }
+  body header .center #menu-colap:hover {
+    background: #34879e;
+    color: white;
+  }
+  body header .center .logo {
+    width: 100%;
+    float: none;
+  }
+  body #content {
+    width: 100%;
+    float: none;
+  }
+  body #content .form {
+    width: 80%;
+  }
+  body #sidebar {
+    float: none;
+    margin: auto;
+    padding-top: 20px;
+    width: 60%;
+  }
+}
+
+@media (max-width: 350px) {
+  body header .center .logo #brand {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 50px;
+  }
+}
+/*# sourceMappingURL=App.css.map */
