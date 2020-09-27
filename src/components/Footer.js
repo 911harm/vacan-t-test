@@ -6,7 +6,7 @@ export default class Footer extends Component {
 
             <footer id="footer">
                 <div className="center">
-                    <p>&copy; 911harm</p>
+                    <p>&copy; <a href="https://github.com/911harm/vacan-t-test">911harm</a></p>
                 </div>
             </footer>
         )

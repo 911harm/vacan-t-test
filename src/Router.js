@@ -28,7 +28,7 @@ export default class Router extends Component {
                                 <Route exact path="/" render={() => (<Section title="Personas" />)} />
                                 <Route exact path="/home" render={() => (<Section title="Personas" />)} />
                                 <Route exact path="/Persona/:id" component={Person}/>
-                                <Route exact path="/Edit/:id?" component={Edit}/>
+                                <Route exact path="/Edit/:id" component={Edit}/>
                                 <Route exact path="/Add" component={Add} />
                                 <Route component={Error} />
 

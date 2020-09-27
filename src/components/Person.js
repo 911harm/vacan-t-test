@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import { urlApi } from '../Global';
 import { NavLink } from 'react-router-dom';
+//
+import swal from 'sweetalert';
 
 
 
@@ -13,20 +15,34 @@ export default class Person extends Component {
 
     }
     Delete = () => {
-        console.log("Borrando Persona con id:" + this.state.person.id)
-        axios.delete(urlApi + "/" + this.state.person.id).then(res => {
-            console.log(res)
-            this.setState({
-                status: true
-            })
-        })
+        swal({
+            title: "Seguro quieres elminarl@?",
+            text: "No se puede recuperar despues de eliminado",
+            icon: "warning",
+            buttons: [true,true],
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+                console.log("Borrando Persona con id:" + this.state.person.id)
+                axios.delete(urlApi + "/" + this.state.person.id).then(res => {
+                    console.log(res)
+                    this.setState({
+                        status: true
+                    })
+                })
+            }
+            else{
+              swal("No se elimino");
+            }
+          });
     }
 
 
     componentDidMount(props) {
         var id = this.props.match.params.id
         axios.get(urlApi + id).then(res => {
-            console.log(id)
+            // console.log(res.data)
             this.setState({
                 person: res.data
             })
@@ -40,15 +56,23 @@ export default class Person extends Component {
         return (
             <div className="Person">
                 <h1>Nombre: {this.state.person.name}</h1>
-                <hr />
-                <h2>Email: {this.state.person.email}</h2>
-                <h2>Telefono:{this.state.person.phone}</h2>
-                <h2>Web: {this.state.person.website}</h2>
-                <h2>Usuario{this.state.person.username}</h2>
-                <br />
+                <hr/>
+                <img src="https://www.freeiconspng.com/uploads/person-icon-8.png" alt={this.state.person.name}/>
+                <div className="basic-data">
+                    <ul>
+                        <li>Email: {this.state.person.email}</li>
+                        <li>Telefono: {this.state.person.phone}</li>
+                        <li>Web: <a href={this.state.person.website} >{this.state.person.website}</a></li>
+                        <li>Usuario: {this.state.person.username}</li>
+
+                    </ul>
+                </div>
+                
+                <div>
                 <button className="btn btn-danger" onClick={this.Delete}> Borrar </button>
-                <br/>
-                <NavLink className="btn btn-warning" to={"/Edit/"}>Editar</NavLink>
+                
+                <NavLink className="btn btn-warning" to={"/Edit/"+this.state.person.id}>Editar</NavLink>
+                </div>
             </div>
         )
     }

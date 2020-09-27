@@ -11,7 +11,7 @@ export default class Section extends Component {
 
     componentDidMount() {
         axios.get(urlApi).then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({
                 persons: res.data
             })
@@ -27,13 +27,13 @@ export default class Section extends Component {
                     return (
                         <article className="article-item" key={person.id}>
                             <h2>{person.name}</h2>
-                            <span className="date">
-                                {person.email}
+                            <span className="detail-item">
+                                Email: {person.email}
                             </span>
-                            <span className="date">
-                                {person.phone}
+                            <span className="detail-item">
+                                Telefono: {person.phone}
                             </span>
-                            <NavLink to={"/Persona/" + person.id}>más Información</NavLink>
+                            <NavLink to={"/Persona/" + person.id}>Más Información</NavLink>
                         </article>
                     )
                 })

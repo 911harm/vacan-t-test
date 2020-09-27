@@ -154,6 +154,46 @@ body #content {
   margin-bottom: 50px;
 }
 
+body #content img {
+  display: inline-block;
+  border-radius: 10px;
+  margin: auto;
+  width: 150px;
+}
+
+body #content .btn {
+  margin: 20px;
+  display: inline-block;
+  width: 25%;
+  padding: 10px;
+  background: teal;
+  color: white;
+}
+
+body #content .btn:hover {
+  background: black;
+}
+
+body #content .btn-danger {
+  background: red;
+}
+
+body #content .btn-warning {
+  background: #ffd000;
+}
+
+body #content .Person h1 {
+  color: #34879e;
+}
+
+body #content .Person .basic-data {
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid #444;
+  background-color: #61dafb;
+  color: #eee;
+}
+
 body #content .form {
   padding-top: 50px;
   width: 40%;
@@ -186,17 +226,13 @@ body #content .article-item {
   width: 80%;
   padding: 20px;
   text-align: left;
+  border: 3px solid #34879e;
+  margin: 8px;
 }
 
-body #content .article-item .date {
-  display: inline-block;
-  margin-top: 20px;
+body #content .article-item .detail-item {
+  display: block;
   color: #444;
-}
-
-body #content .article-item #p-big {
-  margin-top: 20px;
-  font-weight: 600;
 }
 
 body #content .article-item .image-wrap-big {
@@ -305,13 +341,14 @@ body #footer {
     display: none;
   }
   body header .center #menu-colap {
+    font-size: 35px;
+    color: #61dafb;
     margin-top: 10px;
     float: right;
     width: 55px;
     height: 55px;
     display: block;
     line-height: 48px;
-    border: 2px solid #444;
   }
   body header .center #menu-colap:hover {
     background: #34879e;
