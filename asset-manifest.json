@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/vacan-t-test/static/css/main.4195f5c9.chunk.css",
+    "main.js": "/vacan-t-test/static/js/main.44048ccb.chunk.js",
+    "main.js.map": "/vacan-t-test/static/js/main.44048ccb.chunk.js.map",
+    "runtime-main.js": "/vacan-t-test/static/js/runtime-main.06755bb9.js",
+    "runtime-main.js.map": "/vacan-t-test/static/js/runtime-main.06755bb9.js.map",
+    "static/js/2.229994c8.chunk.js": "/vacan-t-test/static/js/2.229994c8.chunk.js",
+    "static/js/2.229994c8.chunk.js.map": "/vacan-t-test/static/js/2.229994c8.chunk.js.map",
+    "index.html": "/vacan-t-test/index.html",
+    "precache-manifest.bed49371df23992560c7b8abe952acc6.js": "/vacan-t-test/precache-manifest.bed49371df23992560c7b8abe952acc6.js",
+    "service-worker.js": "/vacan-t-test/service-worker.js",
+    "static/css/main.4195f5c9.chunk.css.map": "/vacan-t-test/static/css/main.4195f5c9.chunk.css.map",
+    "static/js/2.229994c8.chunk.js.LICENSE.txt": "/vacan-t-test/static/js/2.229994c8.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/vacan-t-test/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.06755bb9.js",
+    "static/js/2.229994c8.chunk.js",
+    "static/css/main.4195f5c9.chunk.css",
+    "static/js/main.44048ccb.chunk.js"
+  ]
+}
